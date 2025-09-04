@@ -1,0 +1,31 @@
+{
+  "package": {
+    "productName": "BAAS",
+    "version": "0.1.0"
+  },
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "tauri": {
+    "allowlist": {
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';"
+    },
+    "windows": [
+      {
+        "title": "BAAS",
+        "width": 800,
+        "height": 600,
+        "resizable": true
+      }
+    ]
+  }
+}
